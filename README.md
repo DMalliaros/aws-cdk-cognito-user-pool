@@ -1,19 +1,54 @@
-# Welcome to your CDK Java project!
+# Amazon CDK and Cognito User Pool
 
-You should explore the contents of this project. It demonstrates a CDK app with an instance of a stack (`ComDmalliarosAwsCognitoStack`)
-which contains an Amazon SQS queue that is subscribed to an Amazon SNS topic.
+This repository contains an example projects for [AWS Cloud Development Kit](https://docs.aws.amazon.com/cdk/latest/guide/home.html) or known as CDK and a [Cognito User Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html).
+ We will create an Cognito User pool with  
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Tools
 
-It is a [Maven](https://maven.apache.org/) based project, so you can open this project with any Maven compatible Java IDE to build and run tests.
+* AWS CDK (Java)
+* Node (>= 10.3.0)
 
-## Useful commands
+## Cognito
 
- * `mvn package`     compile and run tests
- * `cdk ls`          list all stacks in the app
- * `cdk synth`       emits the synthesized CloudFormation template
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk docs`        open CDK documentation
+Cognito can manage the users. That can sign in from different identity providers  like Google, Facebook, Amazon and through SAML identity providers. Can handle the full life circle of a user management.
+On this demo we create a very simple Cognito User Pool
 
-Enjoy!
+### Info
+
+* Cognito User Pool simple configuration 
+* Cognito User Pool put Domain
+* Cognito User Pool Client simple configuration 
+
+
+## CDK
+
+### Install
+To install CDK [check the link](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html)
+
+```shell script
+npm install -g aws-cdk
+```
+
+### Deploy
+Properties that need:
+
+* CDK_DEFAULT_ACCOUNT
+* CDK_DEFAULT_REGION
+
+Optional properties can pass:
+
+* ENVIRONMENT
+* COGNITO_DOMAIN 
+
+```shell script
+mvn complete -DCDK_DEFAULT_ACCOUNT=132659 -DCDK_DEFAULT_REGION=eu-west-1
+cdk deploy
+```
+
+### Destroy
+
+Drop the stack
+
+```shell script
+cdk destroy
+```
