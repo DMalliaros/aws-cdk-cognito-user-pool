@@ -24,7 +24,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.6.0</version>
                 <configuration>
-                    <mainClass>com.myorg.ComDmalliarosAwsCognitoApp</mainClass>
+                    <mainClass>com.dmalliaros.aws.cognito.CognitoApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>
