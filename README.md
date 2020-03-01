@@ -1,7 +1,7 @@
 # Amazon CDK and Cognito User Pool
 
 This repository contains an example projects for [AWS Cloud Development Kit](https://docs.aws.amazon.com/cdk/latest/guide/home.html) or known as CDK and a [Cognito User Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html).
- We will create an Cognito User pool with  
+We will simple configure an Cognito User pool.
 
 ## Tools
 
@@ -37,11 +37,11 @@ Properties that need:
 
 Optional properties can pass:
 
-* ENVIRONMENT
-* COGNITO_DOMAIN 
+* ENVIRONMENT = demo
+* COGNITO_DOMAIN =  ENVIRONMENT + "user-pool-domain-123"
 
 ```shell script
-mvn complete -DCDK_DEFAULT_ACCOUNT=132659 -DCDK_DEFAULT_REGION=eu-west-1
+mvn compile -DCDK_DEFAULT_ACCOUNT=12312313 -DCDK_DEFAULT_REGION=eu-west-1
 cdk deploy
 ```
 
